@@ -1,0 +1,1898 @@
+<!DOCTYPE html>
+<html lang="vi" data-lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lê Thị Ý Nhi — Data Entry Specialist</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Nunito:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #fef6f9;
+  --surface: #ffffff;
+  --surface2: #fdf0f5;
+  --border: #f0d9e6;
+  --text: #3a2d35;
+  --text-mid: #7a6070;
+  --text-light: #b89aaa;
+  --rose: #e8789a;
+  --rose-light: #fde8f0;
+  --sage: #78b8a0;
+  --sage-light: #e4f5ef;
+  --sky: #82aee0;
+  --sky-light: #e6f0fc;
+  --sand: #e0a878;
+  --sand-light: #fdf0e4;
+  --lavender: #b098d8;
+  --lavender-light: #f0ebfb;
+  --mint: #7ecec4;
+  --mint-light: #e4f8f6;
+  --peach: #f0a090;
+  --peach-light: #fdecea;
+  --remote-bg: #fff0f8;
+  --remote-border: #f0a0c8;
+  --remote-text: #9a3a6a;
+  --radius: 16px;
+  --shadow: 0 2px 20px rgba(200,100,150,0.07);
+  --shadow-md: 0 4px 32px rgba(200,100,150,0.13);
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Nunito', sans-serif;
+  font-size: 15px;
+  line-height: 1.65;
+  overflow-x: hidden;
+}
+
+/* ===== LANG TOGGLE ===== */
+.lang-bar {
+  position: fixed;
+  top: 16px; right: 20px;
+  z-index: 1000;
+  display: flex;
+  background: white;
+  border: 1.5px solid var(--border);
+  border-radius: 50px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.lang-btn {
+  padding: 6px 16px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: var(--text-mid);
+  transition: all 0.2s;
+}
+.lang-btn.active {
+  background: var(--text);
+  color: white;
+  border-radius: 50px;
+}
+
+/* ===== HERO ===== */
+.hero {
+  padding: clamp(60px, 8vw, 100px) clamp(20px, 6vw, 80px) 0;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.remote-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--remote-bg);
+  border: 1.5px solid var(--remote-border);
+  color: var(--remote-text);
+  padding: 6px 18px;
+  border-radius: 50px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 24px;
+  animation: pulse-badge 2.5s ease-in-out infinite;
+}
+@keyframes pulse-badge {
+  0%,100%{ box-shadow: 0 0 0 0 rgba(245,200,66,0.4); }
+  50%{ box-shadow: 0 0 0 8px rgba(245,200,66,0); }
+}
+.remote-dot {
+  width: 8px; height: 8px;
+  background: var(--remote-border);
+  border-radius: 50%;
+  animation: blink 1.2s ease-in-out infinite;
+}
+@keyframes blink{ 0%,100%{opacity:1} 50%{opacity:0.3} }
+
+.hero-name {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(36px, 6vw, 68px);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+}
+.hero-name em {
+  font-style: italic;
+  color: var(--rose);
+}
+
+.hero-title {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-mid);
+  margin-bottom: 20px;
+}
+
+.hero-sub {
+  font-size: 16px;
+  color: var(--text-mid);
+  max-width: 540px;
+  line-height: 1.7;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: start;
+  margin-top: 40px;
+  padding-bottom: 60px;
+  border-bottom: 1px solid var(--border);
+}
+
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.stat-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 16px;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+.stat-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  color: var(--rose);
+  line-height: 1;
+}
+.stat-lbl {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  margin-top: 4px;
+}
+
+.remote-highlight {
+  background: linear-gradient(135deg, #fff0f8 0%, #fde4f2 100%);
+  border: 1.5px solid var(--remote-border);
+  border-radius: var(--radius);
+  padding: 24px 28px;
+  box-shadow: 0 4px 20px rgba(240,160,200,0.15);
+}
+.remote-highlight h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  color: var(--remote-text);
+  margin-bottom: 12px;
+}
+[data-lang="vi"] .en { display: none; }
+[data-lang="en"] .vi { display: none; }
+
+.remote-points {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.remote-points li {
+  font-size: 13.5px;
+  color: #7a3060;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+.remote-points li::before {
+  content: '✓';
+  color: var(--rose);
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* ===== SECTION ===== */
+.section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: clamp(40px, 6vw, 70px) clamp(20px, 6vw, 80px);
+  border-bottom: 1px solid var(--border);
+}
+.section:last-child { border-bottom: none; }
+
+.sec-label {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 36px;
+}
+.sec-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--rose);
+  letter-spacing: 0.15em;
+  background: var(--rose-light);
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+.sec-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(22px, 3vw, 30px);
+  letter-spacing: -0.01em;
+}
+.sec-line { flex:1; height:1px; background: var(--border); }
+
+/* ===== ABOUT DASHBOARD ===== */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.manifesto-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px;
+  box-shadow: var(--shadow);
+  border-top: 4px solid var(--rose);
+}
+.manifesto-card h3 {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  margin-bottom: 16px;
+}
+.manifesto-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--text);
+  font-style: italic;
+}
+.manifesto-text strong {
+  font-style: normal;
+  color: var(--rose);
+}
+
+.dashboard-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px;
+  box-shadow: var(--shadow);
+}
+.dashboard-card h3 {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  margin-bottom: 20px;
+}
+
+.progress-list { display: flex; flex-direction: column; gap: 14px; }
+.progress-item {}
+.progress-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 6px;
+}
+.progress-name { font-size: 13px; font-weight: 600; }
+.progress-pct {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: var(--text-mid);
+}
+.progress-bar {
+  height: 7px;
+  background: var(--surface2);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.progress-fill {
+  height: 100%;
+  border-radius: 10px;
+  background: var(--bar-color, var(--rose));
+  width: 0;
+  transition: width 1.2s cubic-bezier(0.4,0,0.2,1);
+}
+.progress-fill.animated { width: var(--bar-width); }
+
+.remote-avail-card {
+  background: var(--remote-bg);
+  border: 1.5px solid var(--remote-border);
+  border-radius: var(--radius);
+  padding: 24px 28px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.avail-icon { font-size: 36px; }
+.avail-text h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  color: var(--remote-text);
+  margin-bottom: 4px;
+}
+.avail-text p {
+  font-size: 13px;
+  color: #a05080;
+}
+
+/* ===== SKILLS GROUPS ===== */
+.skills-groups {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.skill-group {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.skill-group:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+.skill-group-header {
+  padding: 20px 22px 16px;
+  border-bottom: 1px solid var(--border);
+  background: var(--group-bg, var(--surface2));
+}
+.skill-group-icon { font-size: 26px; margin-bottom: 8px; }
+.skill-group-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  margin-bottom: 4px;
+}
+.skill-group-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  line-height: 1.3;
+}
+.skill-group-body { padding: 16px 22px 20px; }
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+}
+.skill-item:last-child { border-bottom: none; }
+.skill-item-name {
+  font-size: 13px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.skill-chip {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  padding: 2px 7px;
+  border-radius: 20px;
+  letter-spacing: 0.06em;
+  background: var(--group-chip-bg, #f0f0f0);
+  color: var(--group-chip-color, #555);
+}
+.skill-item-desc {
+  font-size: 12px;
+  color: var(--text-mid);
+  line-height: 1.5;
+}
+
+.skill-group:nth-child(1) { --group-bg: #fde8f0; --group-chip-bg: #fce0ec; --group-chip-color: #b04870; }
+.skill-group:nth-child(2) { --group-bg: #e6f0fc; --group-chip-bg: #daeaf8; --group-chip-color: #3060a8; }
+.skill-group:nth-child(3) { --group-bg: #e4f5ef; --group-chip-bg: #d8f0e8; --group-chip-color: #2a7860; }
+
+/* ===== SERVICE GROUPS ===== */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.service-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s;
+}
+.service-card:hover { transform: translateY(-2px); }
+.service-card-top {
+  padding: 22px 24px 18px;
+  background: var(--svc-bg, var(--surface2));
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+.svc-icon { font-size: 30px; }
+.svc-meta {}
+.svc-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-light);
+}
+.svc-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  margin-top: 2px;
+  line-height: 1.2;
+}
+.service-card-body { padding: 18px 24px 22px; }
+.svc-desc { font-size: 13px; color: var(--text-mid); margin-bottom: 14px; line-height: 1.6; }
+.svc-tasks { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+.svc-tasks li {
+  font-size: 12.5px;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  color: var(--text);
+}
+.svc-tasks li::before {
+  content: '▸';
+  color: var(--svc-accent, var(--rose));
+  flex-shrink: 0;
+  font-size: 10px;
+  margin-top: 3px;
+}
+
+.service-card:nth-child(1) { --svc-bg: #fde8f0; --svc-accent: var(--rose); }
+.service-card:nth-child(2) { --svc-bg: #e6f0fc; --svc-accent: var(--sky); }
+.service-card:nth-child(3) { --svc-bg: #e4f5ef; --svc-accent: var(--sage); }
+.service-card:nth-child(4) { --svc-bg: #f0ebfb; --svc-accent: var(--lavender); }
+
+.real-badge {
+  display: inline-block;
+  background: var(--sage);
+  color: white;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  padding: 2px 8px;
+  border-radius: 20px;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
+/* ===== EXPERIENCE ===== */
+.exp-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px 32px;
+  box-shadow: var(--shadow);
+  border-left: 4px solid var(--sky);
+  position: relative;
+  overflow: hidden;
+}
+.exp-card::before {
+  content: 'KINH NGHIỆM THỰC TẾ';
+  position: absolute;
+  top: 16px; right: 20px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  color: var(--text-light);
+}
+.exp-period {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--sky);
+  letter-spacing: 0.1em;
+  margin-bottom: 6px;
+}
+.exp-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  margin-bottom: 4px;
+}
+.exp-org {
+  font-size: 13px;
+  color: var(--text-mid);
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+.exp-body { font-size: 14px; color: var(--text-mid); line-height: 1.7; max-width: 680px; }
+.exp-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+}
+.exp-tag {
+  background: var(--sky-light);
+  color: #2a6b99;
+  border: 1px solid #b8d8ee;
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-family: 'JetBrains Mono', monospace;
+  letter-spacing: 0.04em;
+}
+
+/* ===== CONTACT ===== */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.contact-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px 28px;
+  box-shadow: var(--shadow);
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+.contact-icon {
+  width: 44px; height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+  background: var(--ci-bg, var(--rose-light));
+}
+.contact-info {}
+.contact-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  margin-bottom: 3px;
+}
+.contact-value {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  word-break: break-all;
+}
+.contact-value a { color: var(--sky); text-decoration: none; }
+.contact-value a:hover { text-decoration: underline; }
+
+.remote-cta {
+  grid-column: 1/-1;
+  background: linear-gradient(135deg, #fff0f8 0%, #fde4f2 100%);
+  border: 2px solid var(--remote-border);
+  border-radius: var(--radius);
+  padding: 28px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  box-shadow: 0 4px 24px rgba(240,160,200,0.2);
+}
+.cta-text h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  color: var(--remote-text);
+  margin-bottom: 6px;
+}
+.cta-text p { font-size: 14px; color: #a05080; }
+.cta-btn {
+  background: var(--text);
+  color: white;
+  padding: 14px 28px;
+  border-radius: 10px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.2s, transform 0.1s;
+}
+.cta-btn:hover { background: #444; transform: translateY(-1px); }
+
+/* ===== CERTIFICATIONS ===== */
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+.cert-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px 18px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: transform 0.18s, box-shadow 0.18s;
+}
+.cert-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+.cert-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+}
+.cert-icon { font-size: 20px; flex-shrink:0; }
+.cert-year {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: white;
+  background: var(--cert-color, var(--sky));
+  padding: 2px 8px;
+  border-radius: 20px;
+  white-space: nowrap;
+  letter-spacing: 0.06em;
+  flex-shrink:0;
+}
+.cert-name {
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--text);
+}
+.cert-issuer {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--text-light);
+  letter-spacing: 0.05em;
+}
+.cert-relevance {
+  font-size: 11.5px;
+  color: var(--cert-color, var(--sky));
+  margin-top: 2px;
+  line-height: 1.4;
+}
+.cert-note-box {
+  background: var(--lavender-light);
+  border: 1px dashed var(--lavender);
+  border-radius: 10px;
+  padding: 14px 18px;
+  font-size: 12.5px;
+  color: #5a4880;
+  line-height: 1.6;
+  margin-top: 4px;
+}
+.cert-note-box strong { color: #3a2860; }
+@media (max-width: 768px) { .cert-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 480px) { .cert-grid { grid-template-columns: 1fr; } }
+
+/* ===== IDENTITY MANIFESTO ===== */
+.identity-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 20px;
+  align-items: start;
+}
+.identity-main {
+  background: linear-gradient(135deg, #fff0f8 0%, #f8e8f4 100%);
+  border: 2px solid var(--remote-border);
+  border-radius: var(--radius);
+  padding: 32px 36px;
+  position: relative;
+  overflow: hidden;
+}
+.identity-main::before {
+  content: '"';
+  position: absolute;
+  top: -10px; left: 20px;
+  font-family: 'Playfair Display', serif;
+  font-size: 120px;
+  color: var(--remote-border);
+  opacity: 0.4;
+  line-height: 1;
+  pointer-events: none;
+}
+.identity-role {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--remote-text);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.identity-role::before { content: '◆'; font-size: 8px; }
+.identity-statement {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(17px, 2vw, 21px);
+  line-height: 1.55;
+  color: var(--text);
+  margin-bottom: 20px;
+}
+.identity-statement strong { color: var(--rose); font-style: normal; }
+.identity-values {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.identity-value-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--text-mid);
+}
+.iv-icon {
+  width: 28px; height: 28px;
+  background: var(--rose-light);
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px;
+  flex-shrink: 0;
+}
+.iv-text strong { display: block; font-size: 12.5px; color: var(--text); font-weight: 700; }
+.identity-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.id-stat-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 18px 20px;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+.id-stat-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  line-height: 1;
+  color: var(--rose);
+}
+.id-stat-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  margin-top: 4px;
+}
+.id-stat-sub {
+  font-size: 12px;
+  color: var(--text-mid);
+  margin-top: 2px;
+}
+
+/* ===== REMOTE DEVICE ===== */
+.device-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+.device-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px 22px;
+  box-shadow: var(--shadow);
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  transition: transform 0.18s;
+}
+.device-card:hover { transform: translateY(-2px); }
+.device-icon {
+  width: 42px; height: 42px;
+  border-radius: 10px;
+  background: var(--dv-bg, var(--rose-light));
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+.device-info {}
+.device-name {
+  font-weight: 700;
+  font-size: 13.5px;
+  margin-bottom: 2px;
+}
+.device-spec {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--text-mid);
+  letter-spacing: 0.04em;
+}
+.device-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  color: var(--sage);
+  font-weight: 600;
+  margin-top: 4px;
+}
+.device-status::before {
+  content: '';
+  width: 6px; height: 6px;
+  background: var(--sage);
+  border-radius: 50%;
+  display: inline-block;
+}
+.ops-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 16px;
+}
+.ops-chip {
+  background: var(--lavender-light);
+  border: 1px solid var(--lavender);
+  border-radius: 10px;
+  padding: 12px 10px;
+  text-align: center;
+}
+.ops-chip-icon { font-size: 22px; margin-bottom: 4px; }
+.ops-chip-text {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.3;
+}
+.ops-chip-sub {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--text-light);
+  margin-top: 2px;
+}
+
+/* ===== CASE STUDIES ===== */
+.case-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.case-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.case-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+.case-card.featured {
+  border: 2px solid var(--rose);
+  grid-column: 1 / -1;
+}
+.case-header {
+  padding: 22px 24px 18px;
+  background: var(--cs-bg, var(--surface2));
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+.case-header-left { display: flex; align-items: flex-start; gap: 12px; }
+.case-icon { font-size: 28px; }
+.case-meta {}
+.case-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-light);
+}
+.case-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  line-height: 1.25;
+  margin-top: 2px;
+}
+.case-badge-row { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 2px; }
+.case-badge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  padding: 2px 8px;
+  border-radius: 20px;
+  background: var(--cs-chip-bg, var(--rose-light));
+  color: var(--cs-chip-color, #b04870);
+  letter-spacing: 0.06em;
+}
+.case-body { padding: 18px 24px 22px; }
+.case-desc {
+  font-size: 13.5px;
+  color: var(--text-mid);
+  line-height: 1.7;
+  margin-bottom: 14px;
+}
+.hams-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  margin-bottom: 14px;
+}
+.hams-item {
+  background: var(--bg);
+  border-radius: 8px;
+  padding: 8px 10px;
+}
+.hams-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  margin-bottom: 2px;
+}
+.hams-value { font-size: 12px; color: var(--text); line-height: 1.4; font-weight: 600; }
+.result-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.result-chip {
+  background: var(--cs-bg, var(--sage-light));
+  border: 1px solid var(--cs-border, var(--sage));
+  color: var(--cs-chip-color, #2a7860);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.case-card.featured .case-header { background: linear-gradient(135deg, #fde8f0, #f8e0f4); }
+.case-card:nth-child(1) { --cs-bg: #fde8f0; --cs-chip-bg: #fce0ec; --cs-chip-color: #b04870; --cs-border: var(--rose); }
+.case-card.featured { --cs-bg: #fde8f0; --cs-chip-bg: #fce0ec; --cs-chip-color: #b04870; --cs-border: var(--rose); }
+.case-card:nth-child(2) { --cs-bg: #e6f0fc; --cs-chip-bg: #daeaf8; --cs-chip-color: #2a5a90; --cs-border: var(--sky); }
+.case-card:nth-child(3) { --cs-bg: #e4f5ef; --cs-chip-bg: #d8f0e8; --cs-chip-color: #1a6a50; --cs-border: var(--sage); }
+.case-card:nth-child(4) { --cs-bg: #f0ebfb; --cs-chip-bg: #e8e0f8; --cs-chip-color: #5a3a90; --cs-border: var(--lavender); }
+
+.featured-star {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--rose);
+  color: white;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  padding: 3px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .identity-grid, .device-grid, .case-grid { grid-template-columns: 1fr; }
+  .ops-row { grid-template-columns: repeat(2, 1fr); }
+  .hams-grid { grid-template-columns: 1fr; }
+  .case-card.featured { grid-column: auto; }
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: var(--text);
+  color: rgba(255,255,255,0.6);
+  text-align: center;
+  padding: 28px 20px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+}
+footer strong { color: white; }
+
+/* ===== ANIMATIONS ===== */
+.fade-up {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.fade-up.visible { opacity: 1; transform: none; }
+
+@media (max-width: 768px) {
+  .hero-grid, .about-grid, .skills-groups,
+  .service-grid, .contact-grid { grid-template-columns: 1fr; }
+  .hero-stats { grid-template-columns: repeat(3, 1fr); }
+  .remote-cta { flex-direction: column; }
+  .remote-avail-card { flex-direction: column; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- LANG TOGGLE -->
+<div class="lang-bar">
+  <button class="lang-btn active" onclick="setLang('vi')">VI</button>
+  <button class="lang-btn" onclick="setLang('en')">EN</button>
+</div>
+
+<!-- ===== HERO ===== -->
+<div class="section" style="border-bottom:1px solid var(--border); padding-top: clamp(60px,8vw,100px); background: linear-gradient(160deg, #fff0f8 0%, #fef6ff 50%, #f0f4ff 100%);">
+  <div class="remote-badge">
+    <div class="remote-dot"></div>
+    <span class="vi">🌐 Sẵn sàng làm việc Remote — Mọi múi giờ</span>
+    <span class="en">🌐 Available Remote — Any Timezone</span>
+  </div>
+
+  <div class="hero-grid">
+    <div>
+      <p class="hero-title">
+        <span class="vi">Chuyên Gia Nhập Liệu · Kế Toán Nội Bộ</span>
+        <span class="en">Data Entry Specialist · Internal Accounting</span>
+      </p>
+      <h1 class="hero-name vi">Lê Thị<br><em>Ý Nhi</em></h1>
+      <h1 class="hero-name en">Le Thi<br><em>Y Nhi</em></h1>
+
+      <!-- STORY on hero -->
+      <div style="margin-top:20px; padding:20px 24px; background:rgba(255,255,255,0.7); border-left:3px solid var(--rose); border-radius:0 12px 12px 0; backdrop-filter:blur(4px);">
+        <p style="font-family:'Playfair Display',serif;font-size:15.5px;line-height:1.75;color:var(--text);font-style:italic;" class="vi">
+          Tôi không bước vào nghề với bằng cấp kế toán hay chứng chỉ quốc tế trên tay. Tôi bắt đầu bằng một chiếc bàn phím, một file Excel trống và một nguyên tắc duy nhất: <strong style="font-style:normal;color:var(--rose);">số liệu không được sai.</strong> Từ catalog thương mại điện tử hàng nghìn SKU, đến hồ sơ y tế nhạy cảm tại CVG — mỗi ngành dạy tôi một cách đọc dữ liệu khác nhau. Khi bắt đầu học kế toán, tôi nhận ra: đối chiếu thu chi không khác gì kiểm tra catalog. Báo cáo P&L không khác gì bảng tổng hợp đơn hàng — chỉ là <strong style="font-style:normal;color:var(--rose);">ngôn ngữ tài chính.</strong>
+        </p>
+        <p style="font-family:'Playfair Display',serif;font-size:15.5px;line-height:1.75;color:var(--text);font-style:italic;" class="en">
+          I didn't enter this field with an accounting degree. I started with a keyboard, a blank Excel file, and one rule: <strong style="font-style:normal;color:var(--rose);">the numbers cannot be wrong.</strong> From e-commerce catalogs to sensitive medical records at CVG — every sector taught me a different way to read data. When I started studying accounting, I realised: cash reconciliation isn't so different from auditing a catalog. A P&L isn't so different from an order summary — just in <strong style="font-style:normal;color:var(--rose);">financial language.</strong>
+        </p>
+      </div>
+    </div>
+    <div>
+      <div class="hero-stats" style="margin-bottom: 16px;">
+        <div class="stat-box">
+          <div class="stat-num">4+</div>
+          <div class="stat-lbl vi">Năm kinh nghiệm</div>
+          <div class="stat-lbl en">Years exp.</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">99%</div>
+          <div class="stat-lbl vi">Độ chính xác</div>
+          <div class="stat-lbl en">Accuracy</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">24/7</div>
+          <div class="stat-lbl vi">Giờ làm việc</div>
+          <div class="stat-lbl en">Availability</div>
+        </div>
+      </div>
+      <div class="remote-highlight">
+        <h3 class="vi">💻 Tại sao chọn Remote với tôi?</h3>
+        <h3 class="en">💻 Why hire me remotely?</h3>
+        <ul class="remote-points">
+          <li class="vi">Làm việc linh hoạt mọi múi giờ — EST, GMT, AEST</li>
+          <li class="en">Works across all timezones — EST, GMT, AEST</li>
+          <li class="vi">Phản hồi trong vòng 1–2 giờ trong ca làm việc</li>
+          <li class="en">Responds within 1–2 hours during work window</li>
+          <li class="vi">Tự quản lý tiến độ, không cần giám sát liên tục</li>
+          <li class="en">Self-managed progress, no constant supervision needed</li>
+          <li class="vi">Bảo mật dữ liệu — ký NDA khi cần</li>
+          <li class="en">Data confidentiality — NDA available upon request</li>
+          <li class="vi">AI tools tăng tốc x5, không giảm chính xác</li>
+          <li class="en">AI-powered workflow for 5x speed, same accuracy</li>
+          <li class="vi">Thiết bị đầy đủ: PC cao cấp · Camera HD · Mic · Tai nghe</li>
+          <li class="en">Full setup: High-spec PC · HD Camera · Mic · Headset</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== ABOUT / DASHBOARD ===== -->
+<div class="section fade-up">
+  <div class="sec-label">
+    <span class="sec-num">01</span>
+    <h2 class="sec-title vi">Tuyên Ngôn & Dashboard Kỹ Năng</h2>
+    <h2 class="sec-title en">Manifesto & Skills Dashboard</h2>
+    <div class="sec-line"></div>
+  </div>
+
+  <div class="about-grid">
+    <div style="display:flex; flex-direction:column; gap:16px;">
+      <div class="manifesto-card">
+        <h3 class="vi">Tuyên ngôn làm việc · CFO Mindset</h3>
+        <h3 class="en">Work Manifesto · CFO Mindset</h3>
+        <p class="manifesto-text vi">"Dữ liệu sai một ký tự — quyết định sai cả chiến lược. Tôi không chỉ nhập liệu, tôi <strong>bảo vệ tính toàn vẹn tài chính</strong> của tổ chức. Mỗi con số, mỗi bản đối chiếu, mỗi báo cáo P&L đều được xử lý với độ chính xác <strong>100% — như CFO yêu cầu</strong>."</p>
+        <p class="manifesto-text en">"One wrong character — one wrong business decision. I don't just enter data, I <strong>protect the financial integrity</strong> of the organisation. Every figure, every reconciliation, every P&L report is handled with <strong>100% accuracy — at CFO standard</strong>."</p>
+      </div>
+      <div class="remote-avail-card">
+        <div class="avail-icon">🌙</div>
+        <div class="avail-text">
+          <h4 class="vi">Làm việc mọi giờ giấc</h4>
+          <h4 class="en">Available any hour</h4>
+          <p class="vi">Sáng sớm, tối muộn, cuối tuần — không giới hạn. Phù hợp với mọi client quốc tế.</p>
+          <p class="en">Early morning, late night, weekends — no limits. Perfect for international clients.</p>
+        </div>
+      </div>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:16px;">
+      <div class="dashboard-card">
+        <h3 class="vi">Chỉ số năng lực cốt lõi</h3>
+        <h3 class="en">Core Competency Dashboard</h3>
+        <div class="progress-list">
+          <div class="progress-item">
+            <div class="progress-top">
+              <span class="progress-name vi">Tốc độ & Độ chính xác nhập liệu</span>
+              <span class="progress-name en">Speed & Data Accuracy</span>
+              <span class="progress-pct">97%</span>
+            </div>
+            <div class="progress-bar"><div class="progress-fill" style="--bar-width:97%; --bar-color:#e8927c;"></div></div>
+          </div>
+          <div class="progress-item">
+            <div class="progress-top">
+              <span class="progress-name vi">Google Sheets / Excel nâng cao</span>
+              <span class="progress-name en">Google Sheets / Excel Advanced</span>
+              <span class="progress-pct">90%</span>
+            </div>
+            <div class="progress-bar"><div class="progress-fill" style="--bar-width:90%; --bar-color:#7ab0d4;"></div></div>
+          </div>
+          <div class="progress-item">
+            <div class="progress-top">
+              <span class="progress-name vi">AI Prompting & Tự động hóa</span>
+              <span class="progress-name en">AI Prompting & Automation</span>
+              <span class="progress-pct">88%</span>
+            </div>
+            <div class="progress-bar"><div class="progress-fill" style="--bar-width:88%; --bar-color:#a896cc;"></div></div>
+          </div>
+          <div class="progress-item">
+            <div class="progress-top">
+              <span class="progress-name vi">CRM / ERP Systems</span>
+              <span class="progress-name en">CRM / ERP Systems</span>
+              <span class="progress-pct">82%</span>
+            </div>
+            <div class="progress-bar"><div class="progress-fill" style="--bar-width:82%; --bar-color:#7aab8f;"></div></div>
+          </div>
+          <div class="progress-item">
+            <div class="progress-top">
+              <span class="progress-name vi">Bảo mật & Tuân thủ GDPR/HIPAA</span>
+              <span class="progress-name en">Data Security & GDPR/HIPAA</span>
+              <span class="progress-pct">85%</span>
+            </div>
+            <div class="progress-bar"><div class="progress-fill" style="--bar-width:85%; --bar-color:#c9a96e;"></div></div>
+          </div>
+          <div class="progress-item">
+            <div class="progress-top">
+              <span class="progress-name vi">Tiếng Anh chuyên ngành</span>
+              <span class="progress-name en">English (Professional)</span>
+              <span class="progress-pct">80%</span>
+            </div>
+            <div class="progress-bar"><div class="progress-fill" style="--bar-width:80%; --bar-color:#e8927c;"></div></div>
+          </div>
+          <div class="progress-item">
+            <div class="progress-top">
+              <span class="progress-name vi">Kế toán & Báo cáo tài chính (P&L)</span>
+              <span class="progress-name en">Accounting & Financial Reporting (P&L)</span>
+              <span class="progress-pct">85%</span>
+            </div>
+            <div class="progress-bar"><div class="progress-fill" style="--bar-width:85%; --bar-color:#e8789a;"></div></div>
+          </div>
+          <div class="progress-item">
+            <div class="progress-top">
+              <span class="progress-name vi">Excel nâng cao (VLOOKUP · Pivot · SUMIFS)</span>
+              <span class="progress-name en">Advanced Excel (VLOOKUP · Pivot · SUMIFS)</span>
+              <span class="progress-pct">92%</span>
+            </div>
+            <div class="progress-bar"><div class="progress-fill" style="--bar-width:92%; --bar-color:#217346;"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SKILLS GROUPS ===== -->
+<div class="section fade-up" style="background: var(--surface2);">
+  <div class="sec-label">
+    <span class="sec-num">02</span>
+    <h2 class="sec-title vi">3 Nhóm Kỹ Năng Cốt Lõi</h2>
+    <h2 class="sec-title en">3 Core Skill Groups</h2>
+    <div class="sec-line"></div>
+  </div>
+  <div class="skills-groups">
+
+    <!-- GROUP 1 -->
+    <div class="skill-group">
+      <div class="skill-group-header">
+        <div class="skill-group-icon">🗄️</div>
+        <div class="skill-group-num vi">Nhóm 01 · Quản Trị & Xử Lý Dữ Liệu</div>
+        <div class="skill-group-num en">Group 01 · Data Management</div>
+        <div class="skill-group-title vi">Vận hành kho dữ liệu quy mô lớn</div>
+        <div class="skill-group-title en">Large-scale Database Operations</div>
+      </div>
+      <div class="skill-group-body">
+        <div class="skill-item">
+          <div class="skill-item-name">Google Sheets Nâng Cao <span class="skill-chip">Advanced</span></div>
+          <div class="skill-item-desc vi">IMPORTRANGE, QUERY, FILTER — đồng bộ dữ liệu thời gian thực giữa nhiều file</div>
+          <div class="skill-item-desc en">IMPORTRANGE, QUERY, FILTER — real-time sync across multiple files</div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-item-name">SQL / Access / Airtable <span class="skill-chip">Working</span></div>
+          <div class="skill-item-desc vi">Vận hành cơ sở dữ liệu, truy vấn và xuất dữ liệu từ kho lớn</div>
+          <div class="skill-item-desc en">Database operations, querying and exporting from large data stores</div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-item-name">CRM / ERP <span class="skill-chip">Proficient</span></div>
+          <div class="skill-item-desc vi">Salesforce, HubSpot, SAP — nhập/xuất dữ liệu chuẩn quy trình</div>
+          <div class="skill-item-desc en">Salesforce, HubSpot, SAP — structured data import/export</div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-item-name">CMS / E-commerce <span class="skill-chip">Expert</span></div>
+          <div class="skill-item-desc vi">WordPress, Shopify, Amazon Seller Central — đăng sản phẩm và nhập catalog</div>
+          <div class="skill-item-desc en">WordPress, Shopify, Amazon Seller Central — product listing & catalog entry</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- GROUP 2 -->
+    <div class="skill-group">
+      <div class="skill-group-header">
+        <div class="skill-group-icon">🤖</div>
+        <div class="skill-group-num vi">Nhóm 02 · Công Nghệ & Tự Động Hóa AI</div>
+        <div class="skill-group-num en">Group 02 · Tech & AI Automation</div>
+        <div class="skill-group-title vi">Tăng tốc ×5 không giảm chính xác</div>
+        <div class="skill-group-title en">5× faster, same precision</div>
+      </div>
+      <div class="skill-group-body">
+        <div class="skill-item">
+          <div class="skill-item-name">AI Prompting <span class="skill-chip">Advanced</span></div>
+          <div class="skill-item-desc vi">ChatGPT, Claude — chuẩn hóa định dạng, sửa lỗi chính tả, dịch thuật hàng loạt</div>
+          <div class="skill-item-desc en">ChatGPT, Claude — batch formatting, spell-check, bulk translation</div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-item-name">OCR Tools <span class="skill-chip">Proficient</span></div>
+          <div class="skill-item-desc vi">Adobe Acrobat, ABBYY FineReader — chuyển PDF/ảnh sang dữ liệu có cấu trúc</div>
+          <div class="skill-item-desc en">Adobe Acrobat, ABBYY FineReader — PDF/image to structured data</div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-item-name">No-code Automation <span class="skill-chip">Working</span></div>
+          <div class="skill-item-desc vi">Zapier, Make — tự động chuyển dữ liệu từ Gmail/Forms vào bảng tính</div>
+          <div class="skill-item-desc en">Zapier, Make — auto-transfer data from Gmail/Forms to spreadsheets</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- GROUP 3 -->
+    <div class="skill-group">
+      <div class="skill-group-header">
+        <div class="skill-group-icon">🧠</div>
+        <div class="skill-group-num vi">Nhóm 03 · Tư Duy & Kỹ Năng Mềm</div>
+        <div class="skill-group-num en">Group 03 · Soft Skills & Mindset</div>
+        <div class="skill-group-title vi">Ứng biến mọi mảng việc</div>
+        <div class="skill-group-title en">Adaptable to any domain</div>
+      </div>
+      <div class="skill-group-body">
+        <div class="skill-item">
+          <div class="skill-item-name">Data Cleaning <span class="skill-chip">Strong</span></div>
+          <div class="skill-item-desc vi">Phát hiện dữ liệu trùng lặp, thiếu thông tin, sai định dạng ngày/tiền tệ</div>
+          <div class="skill-item-desc en">Detecting duplicates, missing info, wrong date/currency formats</div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-item-name">English — Chuyên Ngành <span class="skill-chip">B2+</span></div>
+          <div class="skill-item-desc vi">Đọc hiểu thuật ngữ thương mại, TMĐT, y tế để không nhập sai ngữ cảnh</div>
+          <div class="skill-item-desc en">Reads commercial, e-commerce & medical terminology for context-accurate entry</div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-item-name">Bảo Mật / GDPR & HIPAA <span class="skill-chip">Aware</span></div>
+          <div class="skill-item-desc vi">Tuân thủ nguyên tắc bảo mật, xử lý dữ liệu cá nhân nhạy cảm đúng chuẩn</div>
+          <div class="skill-item-desc en">Compliant data handling for sensitive personal information per international standards</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ===== SERVICE GROUPS ===== -->
+<div class="section fade-up">
+  <div class="sec-label">
+    <span class="sec-num">03</span>
+    <h2 class="sec-title vi">4 Nhóm Dịch Vụ</h2>
+    <h2 class="sec-title en">4 Service Groups</h2>
+    <div class="sec-line"></div>
+  </div>
+  <div class="service-grid">
+
+    <div class="service-card">
+      <div class="service-card-top">
+        <div class="svc-icon">🛒</div>
+        <div class="svc-meta">
+          <div class="svc-num vi">Nhóm 01</div>
+          <div class="svc-num en">Group 01</div>
+          <div class="svc-title vi">Thương Mại Điện Tử</div>
+          <div class="svc-title en">E-Commerce Data</div>
+        </div>
+      </div>
+      <div class="service-card-body">
+        <p class="svc-desc vi">Nhập catalog sản phẩm, quản lý SKU và xử lý đơn hàng cho các sàn TMĐT lớn.</p>
+        <p class="svc-desc en">Product catalog entry, SKU management and order processing for major e-commerce platforms.</p>
+        <ul class="svc-tasks">
+          <li><span class="vi">Nhập sản phẩm (tên, mô tả, giá, biến thể)</span><span class="en">Product listing (name, desc, price, variants)</span></li>
+          <li><span class="vi">Cập nhật tồn kho & catalog hàng nghìn SKU</span><span class="en">Inventory updates & large-scale SKU catalogs</span></li>
+          <li><span class="vi">Xử lý đơn hàng, địa chỉ giao hàng</span><span class="en">Order & shipping address processing</span></li>
+          <li><span class="vi">Shopee, Lazada, TikTok Shop, Shopify, Amazon</span><span class="en">Shopee, Lazada, TikTok Shop, Shopify, Amazon</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="service-card">
+      <div class="service-card-top">
+        <div class="svc-icon">🤖</div>
+        <div class="svc-meta">
+          <div class="svc-num vi">Nhóm 02</div>
+          <div class="svc-num en">Group 02</div>
+          <div class="svc-title vi">AI & Công Nghệ</div>
+          <div class="svc-title en">AI & Technology</div>
+        </div>
+      </div>
+      <div class="service-card-body">
+        <p class="svc-desc vi">Hỗ trợ xây dựng dataset, gán nhãn dữ liệu và nhập liệu kỹ thuật phục vụ AI.</p>
+        <p class="svc-desc en">Dataset building, data labeling and technical entry for AI development workflows.</p>
+        <ul class="svc-tasks">
+          <li><span class="vi">Gán nhãn dữ liệu (image, text, audio)</span><span class="en">Data labeling (image, text, audio)</span></li>
+          <li><span class="vi">Nhập training dataset theo chuẩn AI</span><span class="en">Structured AI training dataset entry</span></li>
+          <li><span class="vi">Transcription & text annotation</span><span class="en">Transcription & text annotation</span></li>
+          <li><span class="vi">Làm sạch & chuẩn hóa raw data</span><span class="en">Raw data cleaning & normalization</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="service-card" style="grid-column:1/-1; border:2px solid var(--rose); --svc-bg: linear-gradient(135deg,#fde8f0,#f8e0f4);">
+      <div class="service-card-top" style="background:linear-gradient(135deg,#fde8f0,#f8e0f4);">
+        <div class="svc-icon">🏢</div>
+        <div class="svc-meta" style="flex:1;">
+          <div class="svc-num vi" style="color:var(--rose);">Nhóm 03 · TRỌNG TÂM ỨNG TUYỂN — Kế Toán Văn Phòng</div>
+          <div class="svc-num en" style="color:var(--rose);">Group 03 · PRIMARY FOCUS — Office Accounting & Administration</div>
+          <div class="svc-title vi">Quản Trị Văn Phòng & Kế Toán Nội Bộ · Tư Duy CFO</div>
+          <div class="svc-title en">Office Administration & Internal Accounting · CFO Mindset</div>
+        </div>
+        <span style="display:inline-flex;align-items:center;gap:4px;background:var(--rose);color:white;font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.1em;padding:4px 12px;border-radius:20px;white-space:nowrap;flex-shrink:0;">⭐ Focus Role</span>
+      </div>
+      <div class="service-card-body">
+        <p class="svc-desc vi">Quản lý toàn bộ vòng đời dữ liệu tài chính nội bộ: nhập chứng từ, đối chiếu (reconciliation) thu chi hàng ngày, quản lý công nợ AP/AR, bảng lương và thuế — đến lập báo cáo Lãi–Lỗ (P&L) chuyên nghiệp trên Excel, Misa và phần mềm quốc tế. Đọc số liệu với tư duy CFO: không chỉ nhập mà còn phát hiện bất thường và đề xuất điều chỉnh.</p>
+        <p class="svc-desc en">Managing the full internal financial data lifecycle: document entry, daily cash reconciliation, AP/AR management, payroll and tax — through to professional P&L reporting on Excel, Misa and international platforms. Reading figures with a CFO mindset: not just entering but detecting anomalies and proposing adjustments.</p>
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-bottom:14px;">
+          <div style="background:var(--bg);border-radius:8px;padding:8px 10px;">
+            <div style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-light);margin-bottom:2px;">H — Thói Quen / Habit</div>
+            <div style="font-size:12px;color:var(--text);font-weight:600;" class="vi">Đối chiếu thu chi cuối ngày. Không để số liệu tồn đọng qua đêm.</div>
+            <div style="font-size:12px;color:var(--text);font-weight:600;" class="en">End-of-day reconciliation. No figures left unresolved overnight.</div>
+          </div>
+          <div style="background:var(--bg);border-radius:8px;padding:8px 10px;">
+            <div style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-light);margin-bottom:2px;">A — Thái Độ / Attitude</div>
+            <div style="font-size:12px;color:var(--text);font-weight:600;" class="vi">Zero Error Policy — sai 1 số là sai cả báo cáo. Kiểm tra trước khi submit.</div>
+            <div style="font-size:12px;color:var(--text);font-weight:600;" class="en">Zero Error Policy — one wrong figure corrupts the entire report.</div>
+          </div>
+          <div style="background:var(--bg);border-radius:8px;padding:8px 10px;">
+            <div style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-light);margin-bottom:2px;">M — Tư Duy / Mindset</div>
+            <div style="font-size:12px;color:var(--text);font-weight:600;" class="vi">Đọc P&L như CFO — hiểu con số thay vì chỉ nhập con số.</div>
+            <div style="font-size:12px;color:var(--text);font-weight:600;" class="en">Read P&L like a CFO — understand the numbers, don't just type them.</div>
+          </div>
+          <div style="background:var(--bg);border-radius:8px;padding:8px 10px;">
+            <div style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-light);margin-bottom:2px;">S — Kỹ Năng / Skill</div>
+            <div style="font-size:12px;color:var(--text);font-weight:600;">Excel Advanced · VLOOKUP · SUMIFS · Pivot · Misa · HubSpot</div>
+          </div>
+        </div>
+        <ul class="svc-tasks">
+          <li><span class="vi">Đối chiếu (reconciliation) thu – chi, công nợ hàng ngày</span><span class="en">Daily cash & AP/AR reconciliation</span></li>
+          <li><span class="vi">Lập báo cáo P&L, Balance Sheet chuyên nghiệp</span><span class="en">Professional P&L & Balance Sheet reporting</span></li>
+          <li><span class="vi">Quản lý bảng lương, thuế, chứng từ thanh toán</span><span class="en">Payroll, tax & payment document management</span></li>
+          <li><span class="vi">Nhập liệu & vận hành Misa, phần mềm kế toán quốc tế</span><span class="en">Misa & international accounting software entry</span></li>
+          <li><span class="vi">Excel nâng cao: VLOOKUP, SUMIFS, Pivot Table — phân tích tài chính thực chiến</span><span class="en">Advanced Excel: VLOOKUP, SUMIFS, Pivot Table — real-world financial analysis</span></li>
+          <li><span class="vi">Cập nhật CRM, hồ sơ nhân sự, hợp đồng, lịch hẹn</span><span class="en">CRM updates, HR records, contracts, scheduling</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="service-card">
+      <div class="service-card-top">
+        <div class="svc-icon">🏥</div>
+        <div class="svc-meta">
+          <div class="svc-num vi">Nhóm 04</div>
+          <div class="svc-num en">Group 04</div>
+          <div class="svc-title vi">Y Tế · Tài Chính · Pháp Lý <span class="real-badge">Thực tế</span></div>
+          <div class="svc-title en">Healthcare · Finance · Legal <span class="real-badge">Real exp.</span></div>
+        </div>
+      </div>
+      <div class="service-card-body">
+        <p class="svc-desc vi">Xử lý dữ liệu chuyên sâu, nhạy cảm với yêu cầu bảo mật cao nhất.</p>
+        <p class="svc-desc en">Sensitive, specialized data entry with highest confidentiality standards.</p>
+        <ul class="svc-tasks">
+          <li><span class="vi">Nhập hồ sơ liệu trình y tế từng buổi</span><span class="en">Per-session medical treatment records</span></li>
+          <li><span class="vi">Ghi nhận tiến trình điều trị & kết quả</span><span class="en">Treatment progress & outcome tracking</span></li>
+          <li><span class="vi">Nhập chứng từ tài chính, hóa đơn</span><span class="en">Financial documents & invoice entry</span></li>
+          <li><span class="vi">Tuân thủ bảo mật GDPR / HIPAA</span><span class="en">GDPR / HIPAA compliance</span></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ===== EXPERIENCE ===== -->
+<div class="section fade-up" style="background:var(--surface2);">
+  <div class="sec-label">
+    <span class="sec-num">04</span>
+    <h2 class="sec-title vi">Hành Trình & Case Study Thực Tế</h2>
+    <h2 class="sec-title en">Journey & Real Case Studies</h2>
+    <div class="sec-line"></div>
+  </div>
+
+  <!-- STORY INTRO -->
+  <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:28px 32px;box-shadow:var(--shadow);margin-bottom:24px;border-left:4px solid var(--rose);">
+    <p style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--rose);margin-bottom:14px;" class="vi">Câu chuyện 4 năm</p>
+    <p style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--rose);margin-bottom:14px;" class="en">The 4-year story</p>
+    <p style="font-family:'Playfair Display',serif;font-size:17px;line-height:1.7;color:var(--text);font-style:italic;" class="vi">
+      Tôi không bước vào nghề với bằng cấp kế toán hay chứng chỉ quốc tế trên tay. Tôi bắt đầu bằng một chiếc bàn phím, một file Excel trống và một nguyên tắc duy nhất: <strong style="font-style:normal;color:var(--rose);">số liệu không được sai</strong>. Từ những trang catalog thương mại điện tử hàng nghìn SKU, đến hồ sơ điều trị y tế nhạy cảm tại CVG — mỗi ngành tôi bước vào đều dạy tôi một cách đọc dữ liệu khác nhau. Rồi khi bắt đầu học kế toán, tôi nhận ra: tất cả những gì tôi đã làm đều là nền móng. Đối chiếu thu chi không khác gì kiểm tra catalog. Báo cáo P&L không khác gì bảng tổng hợp đơn hàng — chỉ là ngôn ngữ tài chính.
+    </p>
+    <p style="font-family:'Playfair Display',serif;font-size:17px;line-height:1.7;color:var(--text);font-style:italic;" class="en">
+      I didn't enter this field with an accounting degree or international certificates. I started with a keyboard, a blank Excel file, and one rule: <strong style="font-style:normal;color:var(--rose);">the numbers cannot be wrong</strong>. From thousands of e-commerce SKUs to sensitive medical records at CVG — every sector taught me a different way to read data. When I started studying accounting, I realised: everything I had already done was the foundation. Reconciling cash flow isn't so different from auditing a catalog. A P&L report isn't so different from an order summary — just in financial language.
+    </p>
+  </div>
+
+  <!-- TIMELINE -->
+  <div style="display:flex;flex-direction:column;gap:16px;">
+
+    <!-- 2024-2025 CVG -->
+    <div class="exp-card" style="border-left:4px solid var(--rose);">
+      <div class="exp-period" style="color:var(--rose);">2024 – 2025</div>
+      <h3 class="exp-title vi">Nhập Liệu Y Tế & Tiếp Xúc Trực Tiếp Khách Hàng</h3>
+      <h3 class="exp-title en">Medical Data Entry — Direct Client Interaction</h3>
+      <p class="exp-org vi">Dưỡng Sinh Trị Liệu CVG · Nhóm Y Tế & Dữ Liệu Nhạy Cảm</p>
+      <p class="exp-org en">Duong Sinh Tri Lieu CVG · Healthcare & Sensitive Data Group</p>
+      <p class="exp-body vi">Mỗi buổi sáng tôi ngồi đối diện với khách hàng — lắng nghe, ghi nhận và nhập liệu hồ sơ liệu trình ngay lúc đó. Không phải nhập từ file có sẵn, mà là chuyển đổi thông tin sống — lời kể, triệu chứng, tiến trình — thành dữ liệu có cấu trúc. Một sai sót có thể ảnh hưởng đến quyết định điều trị của buổi sau. Đó là lúc tôi hiểu rằng độ chính xác không phải kỹ năng — đó là trách nhiệm.</p>
+      <p class="exp-body en">Each morning I sat across from a client — listening, capturing and entering their treatment record in real time. Not copying from an existing file, but converting live information — their words, symptoms, progress — into structured data. One error could affect the next treatment decision. That's when I understood that accuracy isn't a skill — it's a responsibility.</p>
+      <div class="exp-tags">
+        <span class="exp-tag vi">Nhập liệu thời gian thực</span><span class="exp-tag en">Real-time data entry</span>
+        <span class="exp-tag vi">Hồ sơ y tế nhạy cảm</span><span class="exp-tag en">Sensitive medical records</span>
+        <span class="exp-tag vi">Tiếp xúc trực tiếp khách hàng</span><span class="exp-tag en">Direct client contact</span>
+        <span class="exp-tag vi">Tỉ lệ sai sót 0%</span><span class="exp-tag en">Zero error rate</span>
+        <span class="exp-tag">HIPAA-aware · NDA</span>
+      </div>
+    </div>
+
+    <!-- CASE STUDY: Office Accounting FEATURED -->
+    <div style="border:2px solid var(--rose);border-radius:var(--radius);background:var(--surface);overflow:hidden;box-shadow:var(--shadow-md);">
+      <div style="background:linear-gradient(135deg,#fde8f0,#f8e0f4);padding:20px 28px 16px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;gap:12px;">
+        <div>
+          <p style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:var(--rose);margin-bottom:4px;" class="vi">📁 Case Study · Nhóm 03 — TRỌNG TÂM ỨNG TUYỂN</p>
+          <p style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:var(--rose);margin-bottom:4px;" class="en">📁 Case Study · Group 03 — PRIMARY APPLICATION FOCUS</p>
+          <h3 style="font-family:'Playfair Display',serif;font-size:20px;" class="vi">Quản Trị Văn Phòng & Kế Toán Nội Bộ</h3>
+          <h3 style="font-family:'Playfair Display',serif;font-size:20px;" class="en">Office Administration & Internal Accounting</h3>
+        </div>
+        <span style="background:var(--rose);color:white;font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.1em;padding:5px 14px;border-radius:20px;white-space:nowrap;flex-shrink:0;">⭐ Focus Role</span>
+      </div>
+      <div style="padding:24px 28px;display:grid;grid-template-columns:1fr 1fr;gap:24px;">
+        <!-- LEFT: workflow story -->
+        <div>
+          <p style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.15em;text-transform:uppercase;color:var(--text-light);margin-bottom:10px;" class="vi">Quy trình thực tế hàng ngày</p>
+          <p style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.15em;text-transform:uppercase;color:var(--text-light);margin-bottom:10px;" class="en">Real daily workflow</p>
+          <div style="display:flex;flex-direction:column;gap:8px;">
+            <div style="display:flex;gap:10px;align-items:flex-start;">
+              <span style="background:var(--rose-light);color:var(--rose);font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;padding:2px 8px;border-radius:6px;flex-shrink:0;">08:00</span>
+              <span style="font-size:13px;color:var(--text);" class="vi">Mở file Excel — kiểm tra số dư đầu ngày, đối chiếu tồn quỹ thực tế vs sổ sách</span>
+              <span style="font-size:13px;color:var(--text);" class="en">Open Excel — check opening balance, reconcile actual cash vs ledger</span>
+            </div>
+            <div style="display:flex;gap:10px;align-items:flex-start;">
+              <span style="background:var(--rose-light);color:var(--rose);font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;padding:2px 8px;border-radius:6px;flex-shrink:0;">10:00</span>
+              <span style="font-size:13px;color:var(--text);" class="vi">Nhập chứng từ thu chi phát sinh: hoá đơn mua hàng, phiếu thu khách hàng, phiếu chi nhân sự</span>
+              <span style="font-size:13px;color:var(--text);" class="en">Enter daily vouchers: purchase invoices, receipts, payroll disbursements</span>
+            </div>
+            <div style="display:flex;gap:10px;align-items:flex-start;">
+              <span style="background:var(--rose-light);color:var(--rose);font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;padding:2px 8px;border-radius:6px;flex-shrink:0;">14:00</span>
+              <span style="font-size:13px;color:var(--text);" class="vi">Cập nhật bảng theo dõi công nợ (AP/AR): khách hàng còn nợ, nhà cung cấp đến hạn</span>
+              <span style="font-size:13px;color:var(--text);" class="en">Update AP/AR tracker: overdue receivables, supplier payment due dates</span>
+            </div>
+            <div style="display:flex;gap:10px;align-items:flex-start;">
+              <span style="background:var(--rose-light);color:var(--rose);font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;padding:2px 8px;border-radius:6px;flex-shrink:0;">17:00</span>
+              <span style="font-size:13px;color:var(--text);" class="vi">Đối chiếu cuối ngày: tổng thu vs tổng chi, xác nhận số dư khớp — không để sai số qua đêm</span>
+              <span style="font-size:13px;color:var(--text);" class="en">End-of-day reconciliation: total income vs expense, confirm balance matches — no discrepancy left overnight</span>
+            </div>
+            <div style="display:flex;gap:10px;align-items:flex-start;">
+              <span style="background:var(--rose-light);color:var(--rose);font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;padding:2px 8px;border-radius:6px;flex-shrink:0;">EOM</span>
+              <span style="font-size:13px;color:var(--text);" class="vi">Lập báo cáo P&L tháng: tổng hợp doanh thu, chi phí, lợi nhuận gộp — gửi quản lý duyệt</span>
+              <span style="font-size:13px;color:var(--text);" class="en">Monthly P&L report: revenue, expenses, gross profit summary — submitted for management review</span>
+            </div>
+          </div>
+        </div>
+        <!-- RIGHT: Excel tools + software -->
+        <div>
+          <p style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.15em;text-transform:uppercase;color:var(--text-light);margin-bottom:10px;" class="vi">Công cụ Excel & Phần mềm thực chiến</p>
+          <p style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.15em;text-transform:uppercase;color:var(--text-light);margin-bottom:10px;" class="en">Excel functions & software in use</p>
+          <div style="display:flex;flex-direction:column;gap:6px;">
+            <div style="background:#f0faf4;border:1px solid #a8d8b8;border-radius:8px;padding:9px 12px;">
+              <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#217346;font-weight:700;">SUMIFS / SUMIF</div>
+              <div style="font-size:12px;color:var(--text-mid);" class="vi">Tổng hợp thu chi theo tháng, theo loại chi phí, theo phòng ban</div>
+              <div style="font-size:12px;color:var(--text-mid);" class="en">Sum income/expenses by month, category or department</div>
+            </div>
+            <div style="background:#f0faf4;border:1px solid #a8d8b8;border-radius:8px;padding:9px 12px;">
+              <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#217346;font-weight:700;">VLOOKUP / XLOOKUP</div>
+              <div style="font-size:12px;color:var(--text-mid);" class="vi">Đối chiếu mã khách hàng, mã nhà cung cấp với bảng công nợ tự động</div>
+              <div style="font-size:12px;color:var(--text-mid);" class="en">Auto-match client/supplier codes with AP/AR balance tables</div>
+            </div>
+            <div style="background:#f0faf4;border:1px solid #a8d8b8;border-radius:8px;padding:9px 12px;">
+              <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#217346;font-weight:700;">PIVOT TABLE</div>
+              <div style="font-size:12px;color:var(--text-mid);" class="vi">Tổng hợp báo cáo lãi lỗ theo tháng, quý — so sánh kỳ trước / kỳ này</div>
+              <div style="font-size:12px;color:var(--text-mid);" class="en">P&L summary by month/quarter — period-over-period comparison</div>
+            </div>
+            <div style="background:#f0faf4;border:1px solid #a8d8b8;border-radius:8px;padding:9px 12px;">
+              <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#217346;font-weight:700;">IF / IFERROR · Conditional Formatting</div>
+              <div style="font-size:12px;color:var(--text-mid);" class="vi">Tự động tô màu công nợ quá hạn, cảnh báo chi phí vượt ngân sách</div>
+              <div style="font-size:12px;color:var(--text-mid);" class="en">Auto-highlight overdue invoices, flag over-budget expenses</div>
+            </div>
+            <div style="background:#fff0e8;border:1px solid #f0b088;border-radius:8px;padding:9px 12px;margin-top:2px;">
+              <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#b05020;font-weight:700;" class="vi">Phần mềm sử dụng</div>
+              <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#b05020;font-weight:700;" class="en">Software in use</div>
+              <div style="font-size:12px;color:var(--text-mid);margin-top:3px;">Misa SME · Excel · Google Sheets · HubSpot CRM · QuickBooks (basic)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Result chips -->
+      <div style="padding:0 28px 22px;display:flex;flex-wrap:wrap;gap:7px;">
+        <span style="background:var(--sage-light);border:1px solid var(--sage);color:#1a6a50;padding:4px 14px;border-radius:20px;font-size:12px;font-weight:600;" class="vi">✓ Đối chiếu thu chi — 0 sai số</span>
+        <span style="background:var(--sage-light);border:1px solid var(--sage);color:#1a6a50;padding:4px 14px;border-radius:20px;font-size:12px;font-weight:600;" class="en">✓ Cash reconciliation — zero discrepancy</span>
+        <span style="background:var(--sage-light);border:1px solid var(--sage);color:#1a6a50;padding:4px 14px;border-radius:20px;font-size:12px;font-weight:600;" class="vi">✓ Báo cáo P&L hàng tháng</span>
+        <span style="background:var(--sage-light);border:1px solid var(--sage);color:#1a6a50;padding:4px 14px;border-radius:20px;font-size:12px;font-weight:600;" class="en">✓ Monthly P&L report</span>
+        <span style="background:var(--sage-light);border:1px solid var(--sage);color:#1a6a50;padding:4px 14px;border-radius:20px;font-size:12px;font-weight:600;" class="vi">✓ Theo dõi công nợ AP/AR</span>
+        <span style="background:var(--sage-light);border:1px solid var(--sage);color:#1a6a50;padding:4px 14px;border-radius:20px;font-size:12px;font-weight:600;" class="en">✓ AP/AR tracking</span>
+        <span style="background:var(--sage-light);border:1px solid var(--sage);color:#1a6a50;padding:4px 14px;border-radius:20px;font-size:12px;font-weight:600;" class="vi">✓ Bảng lương & thuế</span>
+        <span style="background:var(--sage-light);border:1px solid var(--sage);color:#1a6a50;padding:4px 14px;border-radius:20px;font-size:12px;font-weight:600;" class="en">✓ Payroll & tax entry</span>
+      </div>
+    </div>
+
+    <!-- CASE STUDY: E-commerce compact -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);">
+        <div style="background:#e6f0fc;padding:16px 20px 12px;border-bottom:1px solid var(--border);">
+          <p style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.15em;text-transform:uppercase;color:#3060a8;margin-bottom:3px;" class="vi">📦 Case Study · Nhóm 01 — Thương Mại Điện Tử</p>
+          <p style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.15em;text-transform:uppercase;color:#3060a8;margin-bottom:3px;" class="en">📦 Case Study · Group 01 — E-Commerce</p>
+          <h4 style="font-family:'Playfair Display',serif;font-size:16px;" class="vi">Catalog & Bảng Giá Cạnh Tranh</h4>
+          <h4 style="font-family:'Playfair Display',serif;font-size:16px;" class="en">Catalog Entry & Competitive Pricing</h4>
+        </div>
+        <div style="padding:14px 20px 18px;">
+          <p style="font-size:13px;color:var(--text-mid);line-height:1.6;margin-bottom:12px;" class="vi">Nhập hàng loạt sản phẩm lên Shopify/Amazon — tên, mô tả, giá, biến thể, hình ảnh. Lập bảng so sánh giá đối thủ bằng Excel (VLOOKUP + conditional formatting) để hỗ trợ định giá theo thị trường theo tuần.</p>
+          <p style="font-size:13px;color:var(--text-mid);line-height:1.6;margin-bottom:12px;" class="en">Bulk listing on Shopify/Amazon — titles, descriptions, pricing, variants, images. Built competitor price comparison sheets in Excel (VLOOKUP + conditional formatting) to support weekly market-based pricing decisions.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:5px;">
+            <span style="background:#e6f0fc;border:1px solid #82aee0;color:#2a5a90;padding:3px 10px;border-radius:20px;font-size:11px;font-weight:600;">Shopify · Amazon</span>
+            <span style="background:#e6f0fc;border:1px solid #82aee0;color:#2a5a90;padding:3px 10px;border-radius:20px;font-size:11px;font-weight:600;">1000+ SKU/batch</span>
+            <span style="background:#e6f0fc;border:1px solid #82aee0;color:#2a5a90;padding:3px 10px;border-radius:20px;font-size:11px;font-weight:600;">Competitive pricing table</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);">
+        <div style="background:#f0ebfb;padding:16px 20px 12px;border-bottom:1px solid var(--border);">
+          <p style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.15em;text-transform:uppercase;color:#5a3a90;margin-bottom:3px;" class="vi">🤖 Case Study · Nhóm 04 — AI & Kiểm Soát Chất Lượng</p>
+          <p style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.15em;text-transform:uppercase;color:#5a3a90;margin-bottom:3px;" class="en">🤖 Case Study · Group 04 — AI & Quality Control</p>
+          <h4 style="font-family:'Playfair Display',serif;font-size:16px;" class="vi">AI × Human QA — Tốc Độ x5, Chính Xác 100%</h4>
+          <h4 style="font-family:'Playfair Display',serif;font-size:16px;" class="en">AI × Human QA — 5× Speed, 100% Accuracy</h4>
+        </div>
+        <div style="padding:14px 20px 18px;">
+          <p style="font-size:13px;color:var(--text-mid);line-height:1.6;margin-bottom:12px;" class="vi">Dùng Claude/ChatGPT để chuẩn hóa định dạng dữ liệu hàng loạt, phát hiện lỗi chính tả, dịch mô tả sản phẩm — sau đó QA thủ công 100% trước khi upload. AI không thay người, AI làm nhanh hơn để người kiểm tra kỹ hơn.</p>
+          <p style="font-size:13px;color:var(--text-mid);line-height:1.6;margin-bottom:12px;" class="en">Using Claude/ChatGPT for batch data formatting, spell-check, product description translation — then 100% manual QA before uploading. AI doesn't replace the person; it works faster so the person can check more carefully.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:5px;">
+            <span style="background:#f0ebfb;border:1px solid #b098d8;color:#5a3a90;padding:3px 10px;border-radius:20px;font-size:11px;font-weight:600;">Claude · ChatGPT</span>
+            <span style="background:#f0ebfb;border:1px solid #b098d8;color:#5a3a90;padding:3px 10px;border-radius:20px;font-size:11px;font-weight:600;">5× throughput</span>
+            <span style="background:#f0ebfb;border:1px solid #b098d8;color:#5a3a90;padding:3px 10px;border-radius:20px;font-size:11px;font-weight:600;">100% QA verified</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- ===== CERTIFICATIONS ===== -->
+<div class="section fade-up">
+  <div class="sec-label">
+    <span class="sec-num">05</span>
+    <h2 class="sec-title vi">Chứng Chỉ & Đào Tạo</h2>
+    <h2 class="sec-title en">Certifications & Training</h2>
+    <div class="sec-line"></div>
+  </div>
+
+  <div class="cert-grid">
+
+    <!-- GG & Excel — core data tools -->
+    <div class="cert-card" style="--cert-color: #34a853;">
+      <div class="cert-top">
+        <span class="cert-icon">📊</span>
+        <span class="cert-year">Google</span>
+      </div>
+      <div class="cert-name">Google Sheets & Excel — Data Skills</div>
+      <div class="cert-issuer">Google / Microsoft</div>
+      <div class="cert-relevance vi">✦ Nền tảng trực tiếp cho nhập liệu & xử lý bảng tính quy mô lớn</div>
+      <div class="cert-relevance en">✦ Core foundation for data entry & large-scale spreadsheet work</div>
+    </div>
+
+    <!-- Google Analytics -->
+    <div class="cert-card" style="--cert-color: #e37400;">
+      <div class="cert-top">
+        <span class="cert-icon">📈</span>
+        <span class="cert-year">Google</span>
+      </div>
+      <div class="cert-name">Google Analytics</div>
+      <div class="cert-issuer">Google Skillshop</div>
+      <div class="cert-relevance vi">✦ Đọc & nhập dữ liệu hành vi người dùng, hiểu ngữ cảnh số liệu</div>
+      <div class="cert-relevance en">✦ Reading & entering user behavior data with metric context</div>
+    </div>
+
+    <!-- Business Analytics -->
+    <div class="cert-card" style="--cert-color: #7ab0d4;">
+      <div class="cert-top">
+        <span class="cert-icon">🔍</span>
+        <span class="cert-year">Analytics</span>
+      </div>
+      <div class="cert-name">Business Analytics</div>
+      <div class="cert-issuer">Online Course</div>
+      <div class="cert-relevance vi">✦ Tư duy phân tích dữ liệu kinh doanh — nhập liệu đúng chiều chiến lược</div>
+      <div class="cert-relevance en">✦ Business data analysis mindset — strategic-aligned data entry</div>
+    </div>
+
+    <!-- HubSpot Economic / Marketing -->
+    <div class="cert-card" style="--cert-color: #ff7a59;">
+      <div class="cert-top">
+        <span class="cert-icon">🟠</span>
+        <span class="cert-year">HubSpot</span>
+      </div>
+      <div class="cert-name">HubSpot — Marketing & Economic</div>
+      <div class="cert-issuer">HubSpot Academy</div>
+      <div class="cert-relevance vi">✦ Hiểu quy trình CRM HubSpot — nhập & quản lý dữ liệu khách hàng chuẩn platform</div>
+      <div class="cert-relevance en">✦ HubSpot CRM workflow — accurate customer data entry & management</div>
+    </div>
+
+    <!-- Automation AppSheet -->
+    <div class="cert-card" style="--cert-color: #a896cc;">
+      <div class="cert-top">
+        <span class="cert-icon">⚡</span>
+        <span class="cert-year">Google</span>
+      </div>
+      <div class="cert-name">Automation — AppSheet</div>
+      <div class="cert-issuer">Google AppSheet</div>
+      <div class="cert-relevance vi">✦ Xây dựng luồng tự động hóa nhập liệu không cần code — tăng tốc x3</div>
+      <div class="cert-relevance en">✦ No-code data entry automation workflows — 3× throughput increase</div>
+    </div>
+
+    <!-- Buyer Journey Map -->
+    <div class="cert-card" style="--cert-color: #7aab8f;">
+      <div class="cert-top">
+        <span class="cert-icon">🗺️</span>
+        <span class="cert-year">Strategy</span>
+      </div>
+      <div class="cert-name">Buyer Journey Mapping</div>
+      <div class="cert-issuer">Marketing Course</div>
+      <div class="cert-relevance vi">✦ Hiểu vòng đời khách hàng — nhập & phân loại dữ liệu CRM theo đúng giai đoạn</div>
+      <div class="cert-relevance en">✦ Customer lifecycle understanding — CRM data entry by funnel stage</div>
+    </div>
+
+    <!-- Basic Social Media -->
+    <div class="cert-card" style="--cert-color: #e8927c;">
+      <div class="cert-top">
+        <span class="cert-icon">📱</span>
+        <span class="cert-year">Meta / Google</span>
+      </div>
+      <div class="cert-name">Basics of Social Media Marketing</div>
+      <div class="cert-issuer">Meta Blueprint / Google</div>
+      <div class="cert-relevance vi">✦ Nắm thuật ngữ social — nhập liệu campaign, audience, KPI không sai ngữ cảnh</div>
+      <div class="cert-relevance en">✦ Social media terminology — campaign, audience & KPI data entry accuracy</div>
+    </div>
+
+    <!-- DIVIDER: 2026 certs -->
+    <div style="grid-column:1/-1; padding: 8px 0 4px; border-top: 1.5px dashed var(--border); margin-top: 4px;">
+      <span style="font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.18em; text-transform:uppercase; color:var(--rose); background:var(--rose-light); padding:3px 12px; border-radius:20px;">
+        ✦ 2026 — Chứng Chỉ Kế Toán & Tài Chính Bổ Sung
+      </span>
+    </div>
+
+    <!-- CFO Dashboard UniAthena 100/100 -->
+    <div class="cert-card" style="--cert-color: #9a3a6a; border: 1.5px solid var(--rose);">
+      <div class="cert-top">
+        <span class="cert-icon">👑</span>
+        <span class="cert-year" style="background:var(--rose);">100/100</span>
+      </div>
+      <div class="cert-name">CFO Financial Dashboard & Reporting</div>
+      <div class="cert-issuer">UniAthena · 2026</div>
+      <div class="cert-relevance vi">✦ Đạt điểm tuyệt đối 100/100 — Lập & đọc bảng điều khiển tài chính cấp CFO</div>
+      <div class="cert-relevance en">✦ Perfect score 100/100 — CFO-level financial dashboard creation & analysis</div>
+    </div>
+
+    <!-- Business Performance Reporting -->
+    <div class="cert-card" style="--cert-color: #c0507a;">
+      <div class="cert-top">
+        <span class="cert-icon">📑</span>
+        <span class="cert-year" style="background:#c0507a;">UniAthena</span>
+      </div>
+      <div class="cert-name">Business Performance Reporting in Financial Statements</div>
+      <div class="cert-issuer">UniAthena · 2026</div>
+      <div class="cert-relevance vi">✦ Lập báo cáo kết quả hoạt động kinh doanh — P&L, Balance Sheet theo chuẩn quốc tế</div>
+      <div class="cert-relevance en">✦ Business performance reporting — P&L, Balance Sheet to international standards</div>
+    </div>
+
+    <!-- Spreadsheet & Accounting Basics -->
+    <div class="cert-card" style="--cert-color: #34a853;">
+      <div class="cert-top">
+        <span class="cert-icon">🧮</span>
+        <span class="cert-year" style="background:#34a853;">Fundamentals</span>
+      </div>
+      <div class="cert-name">Spreadsheet & Accounting Fundamentals</div>
+      <div class="cert-issuer">Online · 2026</div>
+      <div class="cert-relevance vi">✦ Nền tảng kế toán bảng tính — cấu trúc sổ sách, phân loại tài khoản, số dư</div>
+      <div class="cert-relevance en">✦ Spreadsheet accounting foundation — ledger structure, account classification, balances</div>
+    </div>
+
+    <!-- Accounting for Beginners Gitiho -->
+    <div class="cert-card" style="--cert-color: #e8a020;">
+      <div class="cert-top">
+        <span class="cert-icon">📘</span>
+        <span class="cert-year" style="background:#e8a020;">Gitiho</span>
+      </div>
+      <div class="cert-name">Kế Toán Dành Cho Người Mới Bắt Đầu</div>
+      <div class="cert-issuer">Gitiho · 2026</div>
+      <div class="cert-relevance vi">✦ Hạch toán cơ bản, định khoản, lập chứng từ — nền tảng thực hành kế toán văn phòng</div>
+      <div class="cert-relevance en">✦ Basic bookkeeping, journal entries, document preparation — practical office accounting</div>
+    </div>
+
+    <!-- Excel Lookup & Functions -->
+    <div class="cert-card" style="--cert-color: #1a7a40;">
+      <div class="cert-top">
+        <span class="cert-icon">🔢</span>
+        <span class="cert-year" style="background:#1a7a40;">Excel</span>
+      </div>
+      <div class="cert-name">Lookup, Reference, Math & Text Functions in Excel</div>
+      <div class="cert-issuer">Microsoft / Online · 2026</div>
+      <div class="cert-relevance vi">✦ VLOOKUP, XLOOKUP, INDEX/MATCH, SUMIFS — thay thế thao tác thủ công trong kế toán</div>
+      <div class="cert-relevance en">✦ VLOOKUP, XLOOKUP, INDEX/MATCH, SUMIFS — replaces manual accounting operations</div>
+    </div>
+
+    <!-- Data Analysts using Excel -->
+    <div class="cert-card" style="--cert-color: #217346;">
+      <div class="cert-top">
+        <span class="cert-icon">📊</span>
+        <span class="cert-year" style="background:#217346;">Excel · Data</span>
+      </div>
+      <div class="cert-name">Data Analysis Using Microsoft Excel</div>
+      <div class="cert-issuer">Online · 2026</div>
+      <div class="cert-relevance vi">✦ Pivot Table, Power Query, biểu đồ — phân tích dữ liệu tài chính cấp quản lý</div>
+      <div class="cert-relevance en">✦ Pivot Table, Power Query, Charts — management-level financial data analysis</div>
+    </div>
+
+  </div>
+
+  <!-- Note về các chứng chỉ marketing thuần -->
+  <div class="cert-note-box" style="margin-top: 16px;">
+    <span class="vi">
+      <strong>Ghi chú:</strong> Các chứng chỉ Content Marketing, Social Marketing và ReOvps phản ánh nền tảng ngữ cảnh ngành — giúp nhập liệu đúng thuật ngữ, không sai nghĩa trong các dự án thương mại điện tử, marketing và truyền thông số. Không phải dịch vụ marketing mà là <strong>lợi thế nhập liệu hiểu ngành</strong>.
+    </span>
+    <span class="en">
+      <strong>Note:</strong> Content Marketing, Social Marketing & ReOvps certifications provide industry context — enabling accurate terminology entry for e-commerce, marketing and digital media projects. Not a marketing service, but a <strong>domain-aware data entry advantage</strong>.
+    </span>
+  </div>
+</div>
+
+<!-- ===== CONTACT ===== -->
+<div class="section fade-up">
+  <div class="sec-label">
+    <span class="sec-num">06</span>
+    <h2 class="sec-title vi">Liên Hệ</h2>
+    <h2 class="sec-title en">Contact</h2>
+    <div class="sec-line"></div>
+  </div>
+  <div class="contact-grid">
+    <div class="contact-card">
+      <div class="contact-icon" style="--ci-bg: var(--rose-light);">👤</div>
+      <div class="contact-info">
+        <div class="contact-label vi">Họ và tên</div>
+        <div class="contact-label en">Full Name</div>
+        <div class="contact-value">Lê Thị Ý Nhi</div>
+      </div>
+    </div>
+    <div class="contact-card">
+      <div class="contact-icon" style="--ci-bg: var(--sky-light);">📧</div>
+      <div class="contact-info">
+        <div class="contact-label">Email</div>
+        <div class="contact-value"><a href="mailto:aerikael1112@gmail.com">aerikael1112@gmail.com</a></div>
+      </div>
+    </div>
+    <div class="contact-card">
+      <div class="contact-icon" style="--ci-bg: var(--sage-light);">📱</div>
+      <div class="contact-info">
+        <div class="contact-label vi">Điện thoại / Zalo</div>
+        <div class="contact-label en">Phone / Zalo</div>
+        <div class="contact-value"><a href="tel:0326352270">0326 352 270</a></div>
+      </div>
+    </div>
+    <div class="contact-card">
+      <div class="contact-icon" style="--ci-bg: var(--sky-light);">🔗</div>
+      <div class="contact-info">
+        <div class="contact-label">LinkedIn</div>
+        <div class="contact-value"><a href="https://www.linkedin.com/in/le-vivian-3673033b4" target="_blank">le-vivian-3673033b4</a></div>
+      </div>
+    </div>
+
+    <div class="remote-cta">
+      <div class="cta-text">
+        <h3 class="vi">🌐 Sẵn sàng nhận dự án Remote ngay hôm nay</h3>
+        <h3 class="en">🌐 Ready to start remote work today</h3>
+        <p class="vi">Phản hồi trong vòng vài giờ · Mọi múi giờ · Ký NDA theo yêu cầu</p>
+        <p class="en">Reply within hours · Any timezone · NDA upon request</p>
+      </div>
+      <a href="mailto:aerikael1112@gmail.com" class="cta-btn vi">Liên hệ ngay →</a>
+      <a href="mailto:aerikael1112@gmail.com" class="cta-btn en">Get in touch →</a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <strong>Lê Thị Ý Nhi</strong> &nbsp;·&nbsp; Data Entry Specialist &nbsp;·&nbsp; Remote-Ready &nbsp;·&nbsp; 2025<br>
+  <span style="margin-top:6px; display:block; font-size:10px;">aerikael1112@gmail.com &nbsp;·&nbsp; 0326 352 270</span>
+</footer>
+
+<script>
+// Lang toggle
+function setLang(lang) {
+  document.documentElement.setAttribute('data-lang', lang);
+  document.querySelectorAll('.lang-btn').forEach(b => {
+    b.classList.toggle('active', b.textContent.toLowerCase() === lang);
+  });
+}
+
+// Scroll reveal + progress bar animate
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      // animate progress bars inside
+      entry.target.querySelectorAll('.progress-fill').forEach(bar => {
+        setTimeout(() => bar.classList.add('animated'), 200);
+      });
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+// Also trigger progress bars on first visible section (about)
+const aboutSection = document.querySelector('.about-grid');
+if (aboutSection) {
+  const aboutObs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.querySelectorAll('.progress-fill').forEach(bar => {
+          setTimeout(() => bar.classList.add('animated'), 300);
+        });
+        aboutObs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+  aboutObs.observe(aboutSection);
+}
+</script>
+</body>
+</html>
